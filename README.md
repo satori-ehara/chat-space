@@ -41,7 +41,8 @@ Things you may want to cover:
 |group_name|string|null: false, foreign_key: false|
 
 ### Association
-- 
+- has_many :users
+- has_many :chats
 
 ## Chatsテーブル
 |Column|Type|Options|
@@ -51,7 +52,8 @@ Things you may want to cover:
 |group_id|integer|null: false, foreign_key: true|
 
 ### Association
-- 
+- belongs_to :user
+- belongs_to :group
 
 ## groups_usersテーブル
 
