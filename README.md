@@ -16,7 +16,7 @@
 ## Groupsテーブル
 |Column|Type|Options|
 |------|----|-------|
-|group_name|string|null: false, foreign_key: false|
+|name|string|null: false, foreign_key: false|
 
 ### Association
 - has_many :users
