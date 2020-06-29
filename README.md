@@ -24,21 +24,22 @@ Things you may want to cover:
 * ...
 
 
-## Usersテーブル
+## Userテーブル
 |Column|Type|Options|
 |------|----|-------|
-|user_id|integer|null: false, foreign_key: true|
-|group_id|integer|null: false, foreign_key: true|
+|name|integer|null: false, foreign_key: false|
+|email|string|null: false, foreign_key: false|
+|password|integer|null: false, foreign_key: false|
 
-## Groupsテーブル
+## Groupテーブル
 |Column|Type|Options|
 |------|----|-------|
-|user_id|integer|null: false, foreign_key: true|
-|group_id|integer|null: false, foreign_key: true|
+|group_name|integer|null: false, foreign_key: false|
 
 ## Chatsテーブル
 |Column|Type|Options|
 |------|----|-------|
+|chat|text|null: false, foreign_key: false|
 |user_id|integer|null: false, foreign_key: true|
 |group_id|integer|null: false, foreign_key: true|
 
