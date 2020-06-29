@@ -24,7 +24,7 @@ Things you may want to cover:
 * ...
 
 
-## Userテーブル
+## Usersテーブル
 |Column|Type|Options|
 |------|----|-------|
 |name|integer|null: false, foreign_key: false|
@@ -32,9 +32,10 @@ Things you may want to cover:
 |password|string|null: false, foreign_key: false|
 
 ### Association
-- 
+- has_many :groups
+- has_many :chats
 
-## Groupテーブル
+## Groupsテーブル
 |Column|Type|Options|
 |------|----|-------|
 |group_name|string|null: false, foreign_key: false|
