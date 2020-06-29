@@ -4,9 +4,9 @@
 ## Usersテーブル
 |Column|Type|Options|
 |------|----|-------|
-|name|string|null: false, foreign_key: false|
-|email|string|null: false, foreign_key: false|
-|password|string|null: false, foreign_key: false|
+|name|string|null: false|
+|email|string|null: false|
+|password|string|null: false|
 
 ### Association
 - has_many :chats
@@ -16,7 +16,7 @@
 ## Groupsテーブル
 |Column|Type|Options|
 |------|----|-------|
-|name|string|null: false, foreign_key: false|
+|name|string|null: false|
 
 ### Association
 - has_many :chats
@@ -26,7 +26,7 @@
 ## Chatsテーブル
 |Column|Type|Options|
 |------|----|-------|
-|chat|text|null: false, foreign_key: false|
+|chat|text|null: false|
 |image|text||
 |user_id|integer|null: false, foreign_key: true|
 |group_id|integer|null: false, foreign_key: true|
