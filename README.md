@@ -29,12 +29,12 @@ Things you may want to cover:
 |------|----|-------|
 |name|integer|null: false, foreign_key: false|
 |email|string|null: false, foreign_key: false|
-|password|integer|null: false, foreign_key: false|
+|password|string|null: false, foreign_key: false|
 
 ## Groupテーブル
 |Column|Type|Options|
 |------|----|-------|
-|group_name|integer|null: false, foreign_key: false|
+|group_name|string|null: false, foreign_key: false|
 
 ## Chatsテーブル
 |Column|Type|Options|
