@@ -9,7 +9,6 @@
 |password|string|null: false, foreign_key: false|
 
 ### Association
-- has_many :groups
 - has_many :chats
 - has_many :groups_users
 - has_many :groups, through: :groups_users
