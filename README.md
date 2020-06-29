@@ -27,6 +27,7 @@
 |Column|Type|Options|
 |------|----|-------|
 |chat|text|null: false, foreign_key: false|
+|image|text||
 |user_id|integer|null: false, foreign_key: true|
 |group_id|integer|null: false, foreign_key: true|
 
