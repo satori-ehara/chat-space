@@ -31,10 +31,16 @@ Things you may want to cover:
 |email|string|null: false, foreign_key: false|
 |password|string|null: false, foreign_key: false|
 
+### Association
+- 
+
 ## Groupテーブル
 |Column|Type|Options|
 |------|----|-------|
 |group_name|string|null: false, foreign_key: false|
+
+### Association
+- 
 
 ## Chatsテーブル
 |Column|Type|Options|
@@ -42,6 +48,9 @@ Things you may want to cover:
 |chat|text|null: false, foreign_key: false|
 |user_id|integer|null: false, foreign_key: true|
 |group_id|integer|null: false, foreign_key: true|
+
+### Association
+- 
 
 ## groups_usersテーブル
 
