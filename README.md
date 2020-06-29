@@ -4,7 +4,7 @@
 ## Usersテーブル
 |Column|Type|Options|
 |------|----|-------|
-|name|integer|null: false, foreign_key: false|
+|name|string|null: false, foreign_key: false|
 |email|string|null: false, foreign_key: false|
 |password|string|null: false, foreign_key: false|
 
