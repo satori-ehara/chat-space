@@ -70,12 +70,17 @@
     justify-content: space-between;
     &--member{
       .group-name{
-        font-size: 15px;
-        margin-top: 35px;
+        font-size: 20px;
+        margin: 35px 0 15px 0;
+
       }
       .members{
-        font-size: 11px;
-        &--name{
+        font-size: 12px;
+        color: #999999;
+        list-style: none;
+        display: flex;
+        &__name{
+          padding-left: 5px;
         }
       }
     }
