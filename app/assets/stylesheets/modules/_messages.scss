@@ -2,6 +2,14 @@
   box-sizing: border-box;
 }
 
+@mixin center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+$lightblue: #38aef0;
+
 .wrapper{
   width: 100vw;
   height: 100vh;
@@ -14,16 +22,12 @@
   color: #ffffff;
   &__username{
     height: 100px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    @include center();
     .top{
       width: 260px;
       height: 20px;
       display: flex;
       justify-content: space-between;
-      &__name{
-      }
       &__icons{
         width: 60px;
         display: flex;
@@ -31,8 +35,6 @@
         text-decoration: none;
         justify-content: flex-end;
         align-items: center;
-        &--edit{
-        }
         &--gear{
           margin-left: 5px;
         }
@@ -55,7 +57,7 @@
       &--new-message{
         font-size: 11px;
       }
-  }
+    }
   }
 }
 
@@ -92,11 +94,10 @@
         height: 40px;
         font-size: 16px;
         padding: 0 20px 0;
-        display: flex;
-        justify-content: center;
-        align-items: center;
+        @include center();
         text-decoration: none;
-        color: #38aef0;
+        color: $lightblue;
+        border: 1px solid $lightblue;
       }
     }
   }
@@ -133,9 +134,7 @@
     align-items: center;
     .form{
       width: calc(100vw - 80px);
-      display: flex;
-      justify-content: space-around;
-      align-items: center;
+      @include center();
       &__message{
         width: 100%;
         position: relative;
@@ -154,15 +153,22 @@
           top: 0;
           right: 10px;
           height: 100%;
-          display: flex;
-          align-items: center;
+          @include center();
           font-size: 25px;
         }
       }
-    }
       &__btn{
-
+        height: 50px;
+        &--send{
+          background-color: $lightblue;
+          color: #fff;
+          border: 0;
+          height: 100%;
+          padding: 0 30px;
+          margin-left: 15px;
+        }
       }
+    }
 
   }
 }
