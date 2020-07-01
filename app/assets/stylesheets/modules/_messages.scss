@@ -107,6 +107,9 @@
     &--block{
       position: absolute;
       bottom: 0;
+      .header{
+        display: flex;
+      }
     }
   }
   &__message-form{
