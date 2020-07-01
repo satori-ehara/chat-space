@@ -103,10 +103,9 @@
   &__message-list{
     height: calc(100vh - 190px);
     background-color: #fafafa;
-    position: relative;
+    padding: 35px 0 0 40px;
     &--block{
-      position: absolute;
-      bottom: 0;
+      padding-bottom: 46px;
       .header{
         display: flex;
         &__name{
