@@ -103,6 +103,11 @@
   &__message-list{
     height: calc(100vh - 190px);
     background-color: #fafafa;
+    position: relative;
+    &--block{
+      position: absolute;
+      bottom: 0;
+    }
   }
   &__message-form{
     height: 90px;
