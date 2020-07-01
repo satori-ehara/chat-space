@@ -1,5 +1,12 @@
 .main
   .main__group-info
+    .main__group-info--member
+      .group-name
+        test
+      %ul.members
+        %li.member-name Member:masa
+    .main__group-info--edit
+      = link_to "#",class: "edit" do
+        Edit
   .main__message-list
   .main__message-form
-  
