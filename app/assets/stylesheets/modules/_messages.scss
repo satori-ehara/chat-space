@@ -84,6 +84,14 @@
         }
       }
     }
+    &--edit{
+      background-color: red;
+      display: flex;
+      align-items: center;
+      .edit{
+        font-size: 16px;
+      }
+    }
   }
   &__message-list{
     height: calc(100vh - 190px);
