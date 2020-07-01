@@ -29,7 +29,12 @@
       .body
         長文チャットの表示に関してのテスト。あああああああああああああああああああああ
   .main__message-form
-    .main__message-form--input
-      入力フォーム
-    .main__message-form--send
-      送信ボタン
+    = form_with(model: @a, local: true, class: "form") do |form| 
+      .form__message
+        .form__message--text
+          = form.text_field :name, placeholder: "type a message" ,class: "input-form"
+        .form__message--img
+          = form.label :img,"a"
+          = form.file_field :img,style: "display: none"
+      .form__btn
+        = form.submit "SEND" 

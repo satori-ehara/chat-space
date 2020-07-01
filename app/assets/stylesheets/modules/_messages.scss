@@ -128,5 +128,32 @@
   &__message-form{
     height: 90px;
     background-color: #d2d2d2;
+    padding: 0 40px;
+    display: flex;
+    align-items: center;
+    .form{
+      width: calc(100vw - 80px);
+      display: flex;
+      justify-content: space-around;
+      &__message{
+        width: 100%;
+        position: relative;
+        border: 1px solid black;
+        &--text{
+          .input-form{
+            width: 100%;
+          }
+        }
+        &--img{
+          position: absolute;
+          top: 0;
+          right: 10px;
+        }
+      }
+    }
+      &__btn{
+
+      }
+
   }
 }
