@@ -108,9 +108,11 @@
       padding-bottom: 46px;
       .header{
         display: flex;
+        padding-bottom: 12px;
         &__name{
           font-size: 16px;
           color: #333333;
+          padding-right: 5px;
         }
         &__date{
           font-size: 12px;
