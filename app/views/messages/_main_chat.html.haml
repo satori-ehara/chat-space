@@ -34,7 +34,7 @@
         .form__message--text
           = form.text_field :name, placeholder: "type a message" ,class: "input-form"
         .form__message--img
-          = form.label :img,"a"
+          = form.label :img,icon("far","image")
           = form.file_field :img,style: "display: none"
       .form__btn
         = form.submit "SEND" 
