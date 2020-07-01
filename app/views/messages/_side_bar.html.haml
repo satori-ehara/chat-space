@@ -1,8 +1,12 @@
 .side
   %header.side__username
-    %span<>
     .top
       .top__name
+        name
       .top__icons
+        = link_to "#", class: "top__icons--icon" do
+          = icon("far","edit",class: "top__icons--edit")
+        = link_to "#", class:"top__icons--icon" do
+          = icon("fas","cog",class: "top__icons--gear")
   .side__grouplist
 

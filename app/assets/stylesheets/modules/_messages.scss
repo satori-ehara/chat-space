@@ -19,8 +19,30 @@
     .top{
       width: 260px;
       height: 20px;
-      background-color: #d8d8d8;
+      display: flex;
+      justify-content: space-between;
+      &__name{
+        color: #ffffff;
+      }
+      &__icons{
+        width: 60px;
+        display: flex;
+        text-align: start;
+        text-decoration: none;
+        justify-content: flex-end;
+        align-items: center;
+        &--edit{
+        }
+        &--gear{
+          margin-left: 5px;
+        }
+        &--icon{
+          text-decoration: none;
+          color: #ffffff;
+        }
+      }
     }
+
   }
   &__grouplist{
     height: calc(100vh - 100px);
