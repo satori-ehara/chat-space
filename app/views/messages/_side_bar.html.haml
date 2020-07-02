@@ -2,7 +2,7 @@
   %header.side__username
     .top
       .top__name
-        name
+        = current_user.name
       .top__icons
         = link_to "#", class: "top__icons--icon" do
           = icon("far","edit",class: "top__icons--edit")
