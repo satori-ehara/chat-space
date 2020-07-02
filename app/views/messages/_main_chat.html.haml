@@ -1,0 +1,40 @@
+.main
+  .main__group-info
+    .main__group-info--member
+      .group-name
+        test
+      %ul.members
+        %li Member:
+        %li.members__name masa
+        %li.members__name test2
+        %li.members__name ong-name-test
+    .main__group-info--edit
+      = link_to "#",class: "link__edit" do
+        Edit
+  .main__message-list
+    .main__message-list--block
+      .header
+        .header__name
+          Test-name
+        .header__date
+          2020/7/1(Wed) 17:45:30
+      .body
+        チャット内容の表示場所
+    .main__message-list--block
+      .header
+        .header__name
+          My name
+        .header__date
+          2020/7/1(Wed) 17:47:30
+      .body
+        長文チャットの表示に関してのテスト。あああああああああああああああああああああ
+  .main__message-form
+    = form_with(model: @a, local: true, class: "form") do |form| 
+      .form__message
+        .form__message--text
+          = form.text_field :name, placeholder: "type a message" ,class: "input-form"
+        .form__message--img
+          = form.label :img,icon("far","image")
+          = form.file_field :img,style: "display: none"
+      .form__btn
+        = form.submit "SEND" ,class: "form__btn--send"
