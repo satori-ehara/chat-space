@@ -2,11 +2,11 @@
   %header.side__username
     .top
       .top__name
-        name
+        = current_user.name
       .top__icons
         = link_to "#", class: "top__icons--icon" do
           = icon("far","edit",class: "top__icons--edit")
-        = link_to "#", class:"top__icons--icon" do
+        = link_to edit_user_path(current_user.id), class:"top__icons--icon" do
           = icon("fas","cog",class: "top__icons--gear")
   .side__grouplist
     .side__group
