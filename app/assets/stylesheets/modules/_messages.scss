@@ -50,6 +50,10 @@ $lightblue: #38aef0;
     background-color: #2f3e51;
     .side__group{
       padding: 20px 20px 40px 20px;
+      &--link{
+        text-decoration: none;
+        color: #ffffff;
+      }
       &--group-name{
         font-size: 15px;
         margin-bottom: 5px;

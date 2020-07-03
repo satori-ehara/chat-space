@@ -11,7 +11,7 @@
   .side__grouplist
     - current_user.groups.each do |group|
       .side__group
-        = link_to "#" do
+        = link_to "#" ,class:"side__group--link" do
           .side__group--group-name
             = group.name
           .side__group--new-message
