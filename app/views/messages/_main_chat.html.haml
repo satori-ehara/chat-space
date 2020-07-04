@@ -19,7 +19,7 @@
         .form__message--text
           = f.text_field :messages, placeholder: "type a message" ,class: "input-form"
         .form__message--img
-          = f.label :image,icon("far","image")
-          = f.file_field :img,style: "display: none"
+          = f.label :image ,icon("far","image")
+          = f.file_field :image,style: "display: none"
       .form__btn
         = f.submit "SEND" ,class: "form__btn--send"
