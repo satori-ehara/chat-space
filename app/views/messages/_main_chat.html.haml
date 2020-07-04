@@ -2,25 +2,17 @@
   .main__group-info
     .main__group-info--member
       .group-name
-        test
+        = @group.name
       %ul.members
         %li Member:
-        %li.members__name masa
-        %li.members__name test2
-        %li.members__name ong-name-test
+        - @group.users.each do |user|
+          %li.members__name 
+            = user.name
     .main__group-info--edit
-      = link_to "#",class: "link__edit" do
+      = link_to edit_group_path(@group.id),class: "link__edit" do
         Edit
   .main__message-list
-    - @group.messages.each do |message|
-      .main__message-list--block
-        .header
-          .header__name
-            = message.user.name
-          .header__date
-            = message.created_at
-        .body
-          = message.messages
+    = render partial: 'message', collection: @messages
   .main__message-form
     = form_with(model: [@group,@message], local: true, class: "form") do |f| 
       .form__message
