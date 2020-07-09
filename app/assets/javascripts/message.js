@@ -41,6 +41,10 @@ $(function(){
     };
   }
 
+  function BtnReset(){
+    $('.form__btn--send').prop('disabled', false);
+  }
+
   $(".form").on("submit", function(e){
     console.log("ok");
     e.preventDefault();
@@ -59,10 +63,11 @@ $(function(){
       $('.main__message-list').append(html);
       $('.main__message-list').animate({ scrollTop: $('.main__message-list')[0].scrollHeight});
       $('form')[0].reset();
-      $('.form__btn--send').prop('disabled', false);
+      BtnReset();
     })
     .fail(function() {
       alert("メッセージ送信に失敗しました");
+      BtnReset();
   });
   })
 })
