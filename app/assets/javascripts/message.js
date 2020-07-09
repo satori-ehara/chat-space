@@ -7,7 +7,7 @@ $(function(){
       let html =
         `<div class="main__message-list--block">
           <div class="header">
-            <div class=".header__name">
+            <div class="header__name">
               ${message.user_name}
             </div>
             <div class="header__date">
@@ -27,7 +27,7 @@ $(function(){
       let html =
       `<div class="main__message-list--block">
         <div class="header">
-          <div class=".header__name">
+          <div class="header__name">
             ${message.user_name}
           </div>
           <div class="header__date">
