@@ -109,6 +109,7 @@ $lightblue: #38aef0;
     height: calc(100vh - 190px);
     background-color: #fafafa;
     padding: 35px 0 0 40px;
+    overflow: scroll;
     &--block{
       padding-bottom: 46px;
       .header{
