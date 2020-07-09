@@ -62,6 +62,7 @@ $(function(){
       $('.main__message-list').append(html);
       $('.main__message-list').animate({ scrollTop: $('.main__message-list')[0].scrollHeight});
       $('form')[0].reset();
+      $('.form__btn--send').prop('disabled', false);
     })
   })
 })
