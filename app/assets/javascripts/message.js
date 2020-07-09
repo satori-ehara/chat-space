@@ -2,10 +2,12 @@ $(function(){
   $(".form").on("submit", function(e){
     console.log("ok");
     e.preventDefault();
+    let url = $(this).attr('action');
+    let formData = new FormData(this);
     $.ajax({
-      url: 取得したリクエストURL,  //同期通信でいう『パス』
-      type: 'POST',  //同期通信でいう『HTTPメソッド』
-      data: 取得したFormData,  
+      url: url,
+      type: 'POST',
+      data: formData,
       dataType: 'json',
       processData: false,
       contentType: false
