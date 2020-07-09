@@ -1,9 +1,7 @@
 $(function(){
 
   function buildHTML(message){
-    console.log(message.image.url);
     if ( message.image.url ) {
-      console.log("true");
       let html =
         `<div class="main__message-list--block">
           <div class="header">
@@ -23,7 +21,6 @@ $(function(){
         </div>`
       return html;
     } else {
-      console.log("false");
       let html =
       `<div class="main__message-list--block">
         <div class="header">
