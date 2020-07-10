@@ -33,7 +33,6 @@ $(function(){
 
   $("#UserSearch__field").on("keyup", function(){
     let input = $(this).val();
-    console.log(input);
     $.ajax({
       type: "GET",
       url: "/users",       //users_controllerの、indexアクションにリクエストの送信先を設定する
@@ -56,7 +55,6 @@ $(function(){
   })
 
   $("#UserSearchResult").on('click', ".ChatMember__add", function(){
-    console.log($(this).data().userName);
     GroupAddUser($(this).data().userName, $(this).data().userId);
     $(this).parent().empty();
   });
