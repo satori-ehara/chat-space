@@ -29,7 +29,7 @@
           - if user.id != current_user.id
             .ChatMember
               %p.ChatMember__name= user.name
-              %input{name: "group[user_ids][]", type: "hidden", value: current_user.id}
+              %input{name: "group[user_ids][]", type: "hidden", value: user.id}
               // <div class="ChatMember__remove ChatMember__button">削除</div>
               .ChatMember__remove.ChatMember__button= "削除"
 
