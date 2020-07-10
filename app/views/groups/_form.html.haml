@@ -25,6 +25,16 @@
         .ChatMember
           %p.ChatMember__name= current_user.name
           %input{name: "group[user_ids][]", type: "hidden", value: current_user.id}
+        - group.users.each do |user|
+          - if user.id != current_user.id
+            .ChatMember
+              %p.ChatMember__name= user.name
+              %input{name: "group[user_ids][]", type: "hidden", value: current_user.id}
+              // <div class="ChatMember__remove ChatMember__button">削除</div>
+              .ChatMember__remove.ChatMember__button= "削除"
+
+
+
   .SettingGroupForm__field
     .SettingGroupForm__leftField
     .SettingGroupForm__rightField
