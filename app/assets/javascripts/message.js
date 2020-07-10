@@ -1,4 +1,6 @@
 $(function(){
+  let last_message_id = $('.main__message-list--block:last').data("message-id");
+  console.log(last_message_id)
 
   function buildHTML(message){
     if ( message.image.url ) {
