@@ -3,7 +3,7 @@ $(function(){
   function buildHTML(message){
     if ( message.image.url ) {
       let html =
-        `<div class="main__message-list--block">
+        `<div class="main__message-list--block" data-message-id=${message.id}>
           <div class="header">
             <div class="header__name">
               ${message.user_name}
@@ -22,7 +22,7 @@ $(function(){
       return html;
     } else {
       let html =
-      `<div class="main__message-list--block">
+      `<div class="main__message-list--block" data-message-id=${message.id}>
         <div class="header">
           <div class="header__name">
             ${message.user_name}
@@ -40,6 +40,7 @@ $(function(){
       return html;
     };
   }
+
 
   $(".form").on("submit", function(e){
     e.preventDefault();
