@@ -1,7 +1,7 @@
 $(function(){
 
   function buildHTML(message){
-    if ( message.image.url ) {
+    if ( message.image ) {
       let html =
         `<div class="main__message-list--block" data-message-id=${message.id}>
           <div class="header">
@@ -16,7 +16,7 @@ $(function(){
             <p class="body__content">
               ${message.message}
             </p>
-            <img class="Message__image" src="${message.image.url}">
+            <img class="Message__image" src="${message.image}">
           </div>
         </div>`
       return html;
@@ -43,7 +43,7 @@ $(function(){
 
   let reloadMessages = function() {
     //カスタムデータ属性を利用し、ブラウザに表示されている最新メッセージのidを取得
-    let last_message_id = $('.main__message-list--block').data("message-id");
+    let last_message_id = $('.main__message-list--block:last').data("message-id");
     $.ajax({
       //ルーティングで設定した通り/groups/id番号/api/messagesとなるよう文字列を書く
       url: "api/messages",
@@ -54,19 +54,23 @@ $(function(){
       data: {id: last_message_id}
     })
     .done(function(messages) {
-      if (messeges.length !== 0){
+      if (messages.length !== 0){
         let insertHTML = '';
-        $.each(message, function(i, message) {
+        console.log(messages);
+        $.each(messages, function(i, message) {
           insertHTML += buildHTML(message)
+          console.log(insertHTML);
         });
         $('.main__message-list--block').append(insertHTML);
         $('.main__message-list--block').animate({ scrollTop: $('.main__message-list--block')[0].scrollHeight});
       }
     })
     .fail(function() {
-      alert('error');
+      alert('ここのエラーだよね');
     });
   };
 
-  setInterval(reloadMessages, 7000);
+  reloadMessages();
+
+  //setInterval(reloadMessages, 7000);
 })
