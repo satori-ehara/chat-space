@@ -56,21 +56,16 @@ $(function(){
     .done(function(messages) {
       if (messages.length !== 0){
         let insertHTML = '';
-        console.log(messages);
         $.each(messages, function(i, message) {
           insertHTML += buildHTML(message)
-          console.log(insertHTML);
         });
-        $('.main__message-list--block').append(insertHTML);
-        $('.main__message-list--block').animate({ scrollTop: $('.main__message-list--block')[0].scrollHeight});
+        $('.main__message-list').append(insertHTML);
+        $('.main__message-list').animate({ scrollTop: $('.main__message-list')[0].scrollHeight});
       }
     })
     .fail(function() {
       alert('ここのエラーだよね');
     });
   };
-
-  reloadMessages();
-
-  //setInterval(reloadMessages, 7000);
+  setInterval(reloadMessages, 7000);
 })
